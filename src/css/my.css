@@ -1,0 +1,258 @@
+body {
+    background-color: #e1e1e1;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.content_w620px {
+    margin: auto;
+    padding: 0 calc((100% - 620px) / 2);
+}
+
+#mynavbar {
+    background-color: #4a90e2;
+}
+
+#mynavbar > ul > li {
+    text-align: center;
+    width: calc(100% / 3);
+}
+
+#mynavbar>ul>li>a{
+    position: relative;
+    color: #00408B;
+    padding: 24px 12px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+#mynavbar>ul>li>a:active, #mynavbar>ul>li>a.active{
+    color: white;
+}
+
+#mynavbar>ul>li>a:active:before, #mynavbar>ul>li>a.active:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 0px;
+    width: 72%;
+    border-bottom: 5px solid #00408B;
+}
+
+#todoinput {
+    position: relative;
+    margin: 24px auto;
+    padding: 17px 67px 17px 67px;
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: 20px;
+    border: 2px solid #C8C8C8;
+    text-align: left;
+    color: #C8C8C8;
+    cursor: pointer;
+}
+
+.add:before, .add:after {
+    content: "";
+    position: absolute;
+    background-color: #C8C8C8;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.add:before {
+    width: 20px;
+    height: 2px;
+    left: 33px;
+}
+
+.add:after {
+    width: 2px;
+    height: 20px;
+    left: 33px;
+}
+
+#taskleft {
+    padding-left: 32px;
+    font-style: italic;
+    color: #C8C8C8;
+}
+
+.finish_checkbox {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    margin-right: 16px;
+    font-size: 26px;
+    margin-right: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: white;
+    outline: none;
+}
+
+.finish_checkbox:checked:before {
+    content: "\f14a";
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+input.dayselector, input.timeselector {
+    border: 0;    
+}
+
+.todoItem.editon  {
+    margin: 22px auto 24px auto;
+    box-shadow: 3px 3px 14px 1px rgba(0, 0, 0, 0.25);
+    padding-bottom: 0;
+}
+
+.todoItem.editon > div.todoItem_main {
+    padding: 24px 32px 24px 32px;
+}
+
+.todoItem > .cancel_save > input {
+    flex-grow: 1;
+    border-radius: 0;
+    height: 60px;
+    font-size: 24px;
+}
+
+.todoItem > .cancel_save > .cancelBtn {
+    background-color: white;
+    color: #D0021B;
+}
+.todoItem > .cancel_save > .saveBtn {
+    background-color: #4A90E2;
+    color: white;
+}
+
+.todoItem {
+    position: relative;
+/*    padding: 24px 32px 16px 32px;*/
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.todoItem .todoTitle {
+    margin: 0;
+    font-size: 24px;
+    line-height: 28px;
+    flex-grow: 1;
+    padding: 0;
+    border: 0;
+    background-color: inherit;
+    outline: none;
+    padding-right: 24px;
+}
+
+.todoItem .todoItem_main {
+    padding: 24px 32px 17px 32px;
+}
+
+.todoItem .todoItem_editstatus {
+    border-top: 2px solid #C8C8C8;
+    padding: 23px 72px 24px 72px;
+    position: relative;
+}
+
+.todoItem .todoItem_editstatus > .deadlineArea {
+    padding-bottom: 25px;
+}
+
+.todoItem .todoItem_editstatus i {
+    width: 24px;
+}
+
+.todoItem .todoItem_editstatus .timearea,
+.todoItem .todoItem_editstatus .commentarea {
+    padding-left: 25px;
+    padding-right: 6px;
+}
+
+.todoItem .todoItem_editstatus .timearea > input {
+    margin-right: 8px;
+}
+.todoItem .todoItem_editstatus .commentarea > textarea {
+    border: 0;
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
+    resize: none;
+}
+
+.todoItem .todoItem_status{
+    padding-left: 72px;
+    padding-bottom: 17px;
+
+}
+
+.todoItem_status>* {
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.todoItem_status>.date>i {
+    margin-right: 8px;
+}
+.todoItem_status>.date>label {
+    margin: 0;
+    line-height: 1;
+}
+
+/* star checkbox*/
+.todoItem_main .star {
+    width: 24px;
+    height: 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+/*    z-index: 10;*/
+    outline: none;
+    font-size: 24px;
+    margin-right: 32px;
+}
+
+.todoItem_main .star:before {
+    width: 24px;
+    height: 24px;
+}
+
+.todoItem_main .star:checked:before {
+    content: "\e9d9";
+    color: #F5A623;
+}
+
+.todoItem_main .edit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    outline: none;
+}
+
+.todoItem_main .edit:checked {
+    color: #4A90E2;
+}
+
+.important {
+    background-color: #FFF2DC;
+}
+
+.line-through{
+    text-decoration:line-through;
+    color: #9B9B9B;
+}
