@@ -32,7 +32,7 @@ class Todoitem extends Component {
             <div className="d-flex todoItem_status">
                 <div className="date">
                     <i className="far fa-calendar-alt"></i>
-                    <label>6/18</label>
+                    <label>{data.daystring} {data.timestring}</label>
                 </div>
                 <div className="file">
                     <i className="far fa-file"></i>

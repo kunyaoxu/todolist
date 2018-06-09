@@ -104,8 +104,8 @@ class Edit extends Component {
                             <label>Deadline</label>
                         </div>
                         <div className="timearea">
-                            <input className="dayselector" type="date" name="day" onChange={this.setday}/>
-                            <input className="timeselector" type="time" name="time" onChange={this.settime}/>
+                            <input className="dayselector" type="date" name="day" value={this.state.data.daystring} onChange={this.setday}/>
+                            <input className="timeselector" type="time" name="time" value={this.state.data.timestring} onChange={this.settime}/>
                         </div>
                     </div>
                     <div>
